@@ -1,6 +1,7 @@
 .container {
     background: linear-gradient(grey, rgb(208, 208, 208));
     padding: 0.5rem 0.5rem;
+    box-shadow: 1px 3px 8px rgb(0, 0, 0, 0.5);
 
 }
 

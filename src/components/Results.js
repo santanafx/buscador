@@ -1,15 +1,15 @@
 import React from 'react'
 import styles from './Results.module.css'
 
-export const Results = () => {
+export const Results = ({ cep }) => {
     return (
         <div className={styles.sector}>
             <div className={styles.container}>
-                <span>Cidade</span>
-                <span>Bairro</span>
-                <span>Rua</span>
-                <span>Numero</span>
-                <span>Complemento</span>
+                <h2>CEP: {cep.cep}</h2>
+                <span>Cidade: {cep.localidade}</span>
+                <span>Bairro: {cep.bairro}</span>
+                <span>Rua: {cep.logradouro}</span>
+                <span>Estado: {cep.uf}</span>
             </div>
         </div>
     )

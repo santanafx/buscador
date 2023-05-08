@@ -5,21 +5,38 @@ import { Results } from './Results';
 
 export const Form = () => {
 
-    const [dado, setDado] = React.useState();
+    const [dado, setDado] = React.useState('');
+    const [cep, setCep] = React.useState('');
+
+    async function handleClick() {
+
+        try {
+            const response = await fetch(`https://viacep.com.br/ws/${dado}/json/`);
+            const responseJson = await response.json();
+            setCep(responseJson);
+            setDado('');
+        } catch {
+            alert('Não foi possível buscar este CEP.');
+            setDado('');
+        }
+    }
+
 
     return (
         <>
             <div className={styles.sector}>
                 <div className={styles.container}>
                     <label htmlFor="cep">Buscador de CEP</label>
-                    <input type="text" placeholder="Digite seu CEP" id='cep' onChange={(event) => setDado(event.target.value)} />
+                    <input type="text" placeholder="Digite seu CEP" value={dado} onChange={(event) => setDado(event.target.value)} />
                     <div className={styles.botao}>
-                        <button id='botao'>Procurar CEP</button>
-                        <label htmlFor='botao'><BsSearch /></label>
+                        <button onClick={() => handleClick()}>
+                            Procurar CEP
+                            <BsSearch className={styles.lupa} />
+                        </button>
                     </div>
                 </div>
             </div>
-            <Results cep={dado} />
+            {Object.keys(cep).length > 0 && <Results cep={cep} />}
         </>
     )
 }
