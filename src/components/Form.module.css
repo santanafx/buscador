@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(grey, rgb(208, 208, 208));
+    background: linear-gradient(var(--cinza), var(--cinza-claro));
     padding: 20px;
     border-radius: 5px;
 }
@@ -24,7 +24,7 @@
 
 .container input {
     margin: 0.5rem 0;
-    background-color: rgb(228, 228, 228);
+    background-color: var(--cinza-claro);
     opacity: 3;
     padding: 10px;
     border-radius: 5px;
@@ -45,16 +45,16 @@
     cursor: pointer;
     padding: 10px;
     border-radius: 5px;
-    background-color: black;
+    background-color: var(--preto);
     font-weight: 700;
-    color: white;
+    color: var(--branco);
     box-shadow: 1px 3px 8px rgb(0, 0, 0, 0.5);
 
 }
 
 .botao button:hover {
-    background-color: white;
-    color: black;
+    background-color: var(--branco);
+    color: var(--preto);
 
 }
 

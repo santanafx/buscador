@@ -15,12 +15,13 @@ export const Form = () => {
             const responseJson = await response.json();
             setCep(responseJson);
             setDado('');
+
         } catch {
             alert('Não foi possível buscar este CEP.');
             setDado('');
         }
-    }
 
+    }
 
     return (
         <>
@@ -36,6 +37,7 @@ export const Form = () => {
                     </div>
                 </div>
             </div>
+
             {Object.keys(cep).length > 0 && <Results cep={cep} />}
         </>
     )

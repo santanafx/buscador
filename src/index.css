@@ -5,3 +5,10 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
+:root {
+  --preto: #000000;
+  --branco: #ffffff;
+  --cinza: rgb(128, 128, 128);
+  --cinza-claro: rgb(208, 208, 208);
+}
