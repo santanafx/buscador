@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Form.module.css'
 import { BsSearch } from "react-icons/bs";
 import { Results } from './Results';
+import { Head } from './Head';
 
 export const Form = () => {
 
@@ -25,6 +26,7 @@ export const Form = () => {
 
     return (
         <>
+            <Head title='CEP | Início' />
             <div className={styles.sector}>
                 <div className={styles.container}>
                     <label htmlFor="cep">Buscador de CEP</label>
