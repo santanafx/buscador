@@ -1,11 +1,12 @@
 .container {
-    background-color: grey;
+    background: linear-gradient(grey, rgb(208, 208, 208));
     padding: 0.5rem 0.5rem;
 
 }
 
 .container h1 {
     margin-bottom: 20px;
+    animation: flip 2s;
 }
 
 .navlink {
@@ -14,8 +15,21 @@
     text-decoration: none;
     color: black;
     cursor: pointer;
+
 }
 
 .navlink:hover {
     color: white;
+    text-shadow: 1px 3px 8px rgb(0, 0, 0, 0.5);
+
+}
+
+@keyframes flip {
+    from {
+        transform: rotateX(90deg);
+    }
+
+    to {
+        transform: rotateX(0deg);
+    }
 }
