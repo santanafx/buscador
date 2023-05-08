@@ -1,0 +1,21 @@
+.container {
+    background-color: grey;
+    padding: 0.5rem 0.5rem;
+
+}
+
+.container h1 {
+    margin-bottom: 20px;
+}
+
+.navlink {
+    margin: 0 10px;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.navlink:hover {
+    color: white;
+}

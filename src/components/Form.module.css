@@ -1,0 +1,41 @@
+.sector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    padding: 20px;
+}
+
+.container label {
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+.container input {
+    margin: 0.5rem 0
+}
+
+.container button {
+    margin: 0.5rem 0
+}
+
+.botao {
+    display: flex;
+}
+
+.botao button {
+    cursor: pointer;
+}
+
+.botao label {
+    margin-left: 10px;
+    cursor: pointer;
+}
